@@ -1,0 +1,444 @@
+anada@uw1-320-06:~/BinTree_Final$ g++ -std=c++11 *.cpp
+anada@uw1-320-06:~/BinTree_Final$ ./a.out 
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+Initial data:
+  b a c b a c $$ 
+Printing T2
+a b c 
+Testing copy constructor
+
+Printing first (copy constructor of T)
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree T and first (T copy)
+Trees are identical
+Initial data:
+  c b a $$ 
+Printing first after the change
+a and b c eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing T again
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing dup before self assignment
+
+
+test operator=, self-assignment
+Printing dup operator= after self assignment
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing first again after operator=
+a and b c eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree dup and first == overload
+Trees are not identical
+Comparing BinTree dup and first != overload
+Trees are not identical
+Comparing BinTree dup and T == overload
+Trees are identical
+Comparing BinTree dup and T != overload
+Trees are identical
+Comparing BinTree T and T2
+Trees are not identical
+Printing first again after makeEmpty()
+
+
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z zzzzzz $$ 
+Printing T3
+and eee ff iii jj m not ooo pp r sssss tttt y z zzzzzz 
+
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Printing T4
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree T4 and T == overload
+Trees are identical
+
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Testing Retrieve
+Retrieve --> iii:  found
+iii
+Retrieve --> eee:  found
+eee
+Retrieve --> not:  found
+Retrieve --> and:  found
+Retrieve --> ff:  found
+Retrieve --> jj:  found
+Retrieve --> tttt:  found
+Retrieve --> m:  found
+Retrieve --> r:  found
+Retrieve --> y:  found
+Retrieve --> pp:  found
+Retrieve --> sssss:  found
+Retrieve --> z:  found
+Retrieve --> ooo:  found
+-----------------------------------------------------
+Retrieve --> iii:  found
+iii
+Retrieve --> sss:  not found
+0
+Retrieve --> t:  not found
+Retrieve --> ttt:  not found
+Retrieve --> and:  found
+Testing getHeight()
+Height    --> and:  1
+Height    --> not:  5
+Height    --> iii:  6
+Height    --> sss:  0
+Height    --> tttt:  4
+Height    --> ooo:  1
+Height    --> y:  2
+the array is for bstreeToArray function
+
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+and,eee,ff,iii,jj,m,not,ooo,pp,r,sssss,tttt,y,z,
+Testing getHeight() after reconstructing tree
+Height    --> not:  4
+Height    --> ff:  3
+Height    --> sssss:  3
+Height    --> and:  2
+Height    --> jj:  2
+Height    --> pp:  2
+Height    --> y:  2
+Height    --> eee:  1
+Height    --> iii:  1
+Height    --> m:  1
+Height    --> ooo:  1
+Height    --> r:  1
+Height    --> tttt:  1
+Height    --> z:  1
+Height    --> sss:  0
+                    z
+                y
+                    tttt
+            sssss
+                    r
+                pp
+                    ooo
+        not
+                    m
+                jj
+                    iii
+            ff
+                    eee
+                and
+Testing the isEmpty() method
+Tree T3 is not empty
+Tree T6 is empty
+checking if T3 is empty after makeEmpty()
+Tree T3 is empty
+z y x w v u t s r q p o n m l k j i h g f e d c b a $$ 
+T9 Tree
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Height    --> a:  1
+Height    --> z:  26
+Height    --> l:  12
+Height    --> m:  13
+Height    --> n:  14
+Height    --> root:  26
+T9 Tree after re-construction to balanced tree
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Height    --> a:  2
+Height    --> z:  1
+Height    --> l:  1
+Height    --> m:  5
+Height    --> n:  2
+Height    --> root:  5
+Height    --> and:  0
+anada@uw1-320-06:~/BinTree_Final$ valgrind --leak-check=full --track-origins=yes -v ./a.out 
+==8101== Memcheck, a memory error detector
+==8101== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==8101== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==8101== Command: ./a.out
+==8101== 
+--8101-- Valgrind options:
+--8101--    --leak-check=full
+--8101--    --track-origins=yes
+--8101--    -v
+--8101-- Contents of /proc/version:
+--8101--   Linux version 4.4.0-141-generic (buildd@lcy01-amd64-006) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ) #167-Ubuntu SMP Wed Dec 5 10:40:15 UTC 2018
+--8101-- 
+--8101-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--8101-- Page sizes: currently 4096, max supported 4096
+--8101-- Valgrind library directory: /usr/lib/valgrind
+--8101-- Reading syms from /home/NETID/anada/BinTree_Final/a.out
+--8101-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--8101--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--8101--   .. CRC mismatch (computed aa979a42 wanted 9019bbb7)
+--8101--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--8101--   .. CRC is valid
+--8101-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--8101--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--8101--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--8101--    object doesn't have a symbol table
+--8101--    object doesn't have a dynamic symbol table
+--8101-- Scheduler: using generic scheduler lock implementation.
+--8101-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==8101== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-8101-by-anada-on-???
+==8101== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-8101-by-anada-on-???
+==8101== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-8101-by-anada-on-???
+==8101== 
+==8101== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==8101== don't want to do, unless you know exactly what you're doing,
+==8101== or are doing some strange experiment):
+==8101==   /usr/lib/valgrind/../../bin/vgdb --pid=8101 ...command...
+==8101== 
+==8101== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==8101==   /path/to/gdb ./a.out
+==8101== and then give GDB the following command
+==8101==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=8101
+==8101== --pid is optional if only one valgrind process is running
+==8101== 
+--8101-- REDIR: 0x401cfd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--8101-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--8101--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--8101--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--8101--    object doesn't have a symbol table
+--8101-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--8101--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--8101--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--8101--    object doesn't have a symbol table
+==8101== WARNING: new redirection conflicts with existing -- ignoring it
+--8101--     old: 0x0401cfd0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--8101--     new: 0x0401cfd0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--8101-- REDIR: 0x401b920 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--8101-- REDIR: 0x401bb40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--8101-- REDIR: 0x401dd30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--8101-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+--8101--   Considering /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21 ..
+--8101--   .. CRC mismatch (computed b2e7dc97 wanted c9833bdf)
+--8101--    object doesn't have a symbol table
+--8101-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--8101--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--8101--   .. CRC mismatch (computed b9a68419 wanted 29d51b00)
+--8101--    object doesn't have a symbol table
+--8101-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--8101--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--8101--   .. CRC mismatch (computed 7a8ee3e4 wanted a5190ac4)
+--8101--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--8101--   .. CRC is valid
+--8101-- Reading syms from /lib/x86_64-linux-gnu/libm-2.23.so
+--8101--   Considering /lib/x86_64-linux-gnu/libm-2.23.so ..
+--8101--   .. CRC mismatch (computed e8c3647b wanted c3efddac)
+--8101--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.23.so ..
+--8101--   .. CRC is valid
+--8101-- REDIR: 0x5461a00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x545d280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x5463cf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x545f6f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x545fa80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x546114b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x545f400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--8101-- REDIR: 0x5456130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--8101-- REDIR: 0x545d720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+--8101-- REDIR: 0x5460bf0 (libc.so.6:__GI_memcmp) redirected to 0x4c33b90 (__GI_memcmp)
+--8101-- REDIR: 0x545bcd0 (libc.so.6:strcmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x5471570 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4c31f90 (strcmp)
+--8101-- REDIR: 0x5460060 (libc.so.6:__GI_strstr) redirected to 0x4c354d0 (__strstr_sse2)
+--8101-- REDIR: 0x4ec7f10 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c2e7a0 (operator new[](unsigned long))
+--8101-- REDIR: 0x54663f0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x5471820 (libc.so.6:__memcpy_sse2_unaligned) redirected to 0x4c324a0 (memcpy@@GLIBC_2.14)
+--8101-- REDIR: 0x5460bb0 (libc.so.6:bcmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8101-- REDIR: 0x5540430 (libc.so.6:__memcmp_sse4_1) redirected to 0x4c33cd0 (__memcmp_sse4_1)
+Initial data:
+--8101-- REDIR: 0x54613b0 (libc.so.6:__GI_mempcpy) redirected to 0x4c34fa0 (__GI_mempcpy)
+--8101-- REDIR: 0x4ec7e60 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c2e080 (operator new(unsigned long))
+--8101-- REDIR: 0x4ec5f10 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c2f1e0 (operator delete(void*))
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+Initial data:
+  b a c b a c $$ 
+Printing T2
+a b c 
+Testing copy constructor
+
+Printing first (copy constructor of T)
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree T and first (T copy)
+Trees are identical
+Initial data:
+  c b a $$ 
+Printing first after the change
+a and b c eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing T again
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing dup before self assignment
+
+
+test operator=, self-assignment
+Printing dup operator= after self assignment
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Printing first again after operator=
+a and b c eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree dup and first == overload
+Trees are not identical
+Comparing BinTree dup and first != overload
+Trees are not identical
+Comparing BinTree dup and T == overload
+Trees are identical
+Comparing BinTree dup and T != overload
+Trees are identical
+Comparing BinTree T and T2
+Trees are not identical
+Printing first again after makeEmpty()
+
+
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z zzzzzz $$ 
+Printing T3
+and eee ff iii jj m not ooo pp r sssss tttt y z zzzzzz 
+
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Printing T4
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Comparing BinTree T4 and T == overload
+Trees are identical
+
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+Testing Retrieve
+==8101== Conditional jump or move depends on uninitialised value(s)
+==8101==    at 0x401A93: BinTree::retrieve(NodeData const&, NodeData*&) (in /home/NETID/anada/BinTree_Final/a.out)
+==8101==    by 0x403739: main (in /home/NETID/anada/BinTree_Final/a.out)
+==8101==  Uninitialised value was created by a stack allocation
+==8101==    at 0x40267D: main (in /home/NETID/anada/BinTree_Final/a.out)
+==8101== 
+Retrieve --> iii:  found
+iii
+Retrieve --> eee:  found
+eee
+Retrieve --> not:  found
+Retrieve --> and:  found
+Retrieve --> ff:  found
+Retrieve --> jj:  found
+Retrieve --> tttt:  found
+Retrieve --> m:  found
+Retrieve --> r:  found
+Retrieve --> y:  found
+Retrieve --> pp:  found
+Retrieve --> sssss:  found
+Retrieve --> z:  found
+Retrieve --> ooo:  found
+-----------------------------------------------------
+Retrieve --> iii:  found
+iii
+Retrieve --> sss:  not found
+0
+Retrieve --> t:  not found
+Retrieve --> ttt:  not found
+Retrieve --> and:  found
+Testing getHeight()
+Height    --> and:  1
+Height    --> not:  5
+Height    --> iii:  6
+Height    --> sss:  0
+Height    --> tttt:  4
+Height    --> ooo:  1
+Height    --> y:  2
+the array is for bstreeToArray function
+
+Printing T
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+
+and,eee,ff,iii,jj,m,not,ooo,pp,r,sssss,tttt,y,z,
+Testing getHeight() after reconstructing tree
+Height    --> not:  4
+Height    --> ff:  3
+Height    --> sssss:  3
+Height    --> and:  2
+Height    --> jj:  2
+Height    --> pp:  2
+Height    --> y:  2
+Height    --> eee:  1
+Height    --> iii:  1
+Height    --> m:  1
+Height    --> ooo:  1
+Height    --> r:  1
+Height    --> tttt:  1
+Height    --> z:  1
+Height    --> sss:  0
+                    z
+                y
+                    tttt
+            sssss
+                    r
+                pp
+                    ooo
+        not
+                    m
+                jj
+                    iii
+            ff
+                    eee
+                and
+Testing the isEmpty() method
+Tree T3 is not empty
+Tree T6 is empty
+checking if T3 is empty after makeEmpty()
+Tree T3 is empty
+z y x w v u t s r q p o n m l k j i h g f e d c b a $$ 
+T9 Tree
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Height    --> a:  1
+Height    --> z:  26
+Height    --> l:  12
+Height    --> m:  13
+Height    --> n:  14
+Height    --> root:  26
+T9 Tree after re-construction to balanced tree
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Height    --> a:  2
+Height    --> z:  1
+Height    --> l:  1
+Height    --> m:  5
+Height    --> n:  2
+Height    --> root:  5
+Height    --> and:  0
+--8101-- REDIR: 0x4ec5f40 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c2f6e0 (operator delete[](void*))
+--8101-- REDIR: 0x54564f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==8101== 
+==8101== HEAP SUMMARY:
+==8101==     in use at exit: 72,704 bytes in 1 blocks
+==8101==   total heap usage: 325 allocs, 324 frees, 91,576 bytes allocated
+==8101== 
+==8101== Searching for pointers to 1 not-freed blocks
+==8101== Checked 106,040 bytes
+==8101== 
+==8101== LEAK SUMMARY:
+==8101==    definitely lost: 0 bytes in 0 blocks
+==8101==    indirectly lost: 0 bytes in 0 blocks
+==8101==      possibly lost: 0 bytes in 0 blocks
+==8101==    still reachable: 72,704 bytes in 1 blocks
+==8101==         suppressed: 0 bytes in 0 blocks
+==8101== Reachable blocks (those to which a pointer was found) are not shown.
+==8101== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==8101== 
+==8101== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==8101== 
+==8101== 1 errors in context 1 of 1:
+==8101== Conditional jump or move depends on uninitialised value(s)
+==8101==    at 0x401A93: BinTree::retrieve(NodeData const&, NodeData*&) (in /home/NETID/anada/BinTree_Final/a.out)
+==8101==    by 0x403739: main (in /home/NETID/anada/BinTree_Final/a.out)
+==8101==  Uninitialised value was created by a stack allocation
+==8101==    at 0x40267D: main (in /home/NETID/anada/BinTree_Final/a.out)
+==8101== 
+==8101== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+anada@uw1-320-06:~/BinTree_Final$ 
